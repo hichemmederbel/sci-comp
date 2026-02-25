@@ -2,7 +2,7 @@
     {
         "id": "calc-l1",
         "name": "Calculatrice",
-        "author": "L1_Anonyme",
+        "author": "L3_slayt",
         "icon": "computer",
         "entry_point": "./noeuds/calc-l1/index.html",
         "short_description": "Calculatrice simple",
