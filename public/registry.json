@@ -5,6 +5,7 @@
         "author": "L1_Anonyme",
         "icon": "computer",
         "entry_point": "./noeuds/calc-l1/index.html",
+        "short_description": "Calculatrice simple",
         "dependencies": []
     },
     {
@@ -13,6 +14,7 @@
         "author": "M1_Hackathon",
         "icon": "notepad",
         "entry_point": "./noeuds/ru-menu/index.html",
+        "short_description": "Menu du restaurant universitaire St-Charles",
         "dependencies": [
             "calc-l1"
         ]
