@@ -2,7 +2,7 @@
     {
         "id": "explorateur",
         "name": "Explorateur",
-        "author": "AMU System",
+        "author": "slaytt",
         "icon": "folder",
         "entry_point": "./noeuds/explorateur/index.html",
         "dependencies": []
@@ -10,7 +10,7 @@
     {
         "id": "calc-l1",
         "name": "Calculatrice",
-        "author": "L3_slayt",
+        "author": "slaytt",
         "icon": "computer",
         "entry_point": "./noeuds/calc-l1/index.html",
         "short_description": "Calculatrice simple",
@@ -19,7 +19,7 @@
     {
         "id": "ru-menu",
         "name": "Menu RU St-Charles",
-        "author": "M1_Hackathon",
+        "author": "slaytt",
         "icon": "notepad",
         "entry_point": "./noeuds/ru-menu/index.html",
         "short_description": "Menu du restaurant universitaire St-Charles",
