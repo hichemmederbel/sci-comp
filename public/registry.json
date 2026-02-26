@@ -17,6 +17,26 @@
         "dependencies": []
     },
     {
+        "id": "unit-conv",
+        "name": "Convertisseur",
+        "author": "antigravity",
+        "icon": "computer",
+        "entry_point": "./noeuds/unit-conv/index.html",
+        "short_description": "Convertisseur d'unités",
+        "dependencies": [
+            "calc-l1"
+        ]
+    },
+    {
+        "id": "sci-calc",
+        "name": "Calc. Scientifique",
+        "author": "antigravity",
+        "icon": "computer",
+        "entry_point": "./noeuds/sci-calc/index.html",
+        "short_description": "Calculatrice scientifique",
+        "dependencies": []
+    },
+    {
         "id": "ru-menu",
         "name": "Menu RU St-Charles",
         "author": "slaytt",

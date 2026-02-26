@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Scientifique</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="calculator">
+
+        <!-- Display -->
+        <div class="display-area">
+            <input type="text" id="expression-screen" value="" disabled>
+            <input type="text" id="calc-screen" value="0" disabled>
+        </div>
+
+        <!-- DEG / RAD mode -->
+        <div class="mode-row">
+            <button id="btn-deg" class="mode-btn active" onclick="setMode('DEG')">DEG</button>
+            <button id="btn-rad" class="mode-btn" onclick="setMode('RAD')">RAD</button>
+        </div>
+
+        <!-- Buttons grid (6 columns) -->
+        <div class="keys">
+
+            <!-- Row 1: Memory -->
+            <button class="btn mem" onclick="memStore()">MS</button>
+            <button class="btn mem" onclick="memRecall()">MR</button>
+            <button class="btn mem" onclick="memClear()">MC</button>
+            <button class="btn mem" onclick="memAdd()">M+</button>
+            <button class="btn mem" onclick="memSub()">M−</button>
+            <button class="btn clear" onclick="backspace()">⌫</button>
+
+            <!-- Row 2: Scientific top -->
+            <button class="btn sci" onclick="sciFunc('sin')">sin</button>
+            <button class="btn sci" onclick="sciFunc('cos')">cos</button>
+            <button class="btn sci" onclick="sciFunc('tan')">tan</button>
+            <button class="btn sci" onclick="sciFunc('log')">log</button>
+            <button class="btn sci" onclick="sciFunc('ln')">ln</button>
+            <button class="btn clear" onclick="clearAll()">C</button>
+
+            <!-- Row 3: Inverse trig -->
+            <button class="btn sci" onclick="sciFunc('asin')">sin⁻¹</button>
+            <button class="btn sci" onclick="sciFunc('acos')">cos⁻¹</button>
+            <button class="btn sci" onclick="sciFunc('atan')">tan⁻¹</button>
+            <button class="btn sci" onclick="sciFunc('exp')">eˣ</button>
+            <button class="btn sci" onclick="sciFunc('pow10')">10ˣ</button>
+            <button class="btn operator" onclick="clearEntry()">CE</button>
+
+            <!-- Row 4: Powers & roots -->
+            <button class="btn sci" onclick="sciFunc('sq')">x²</button>
+            <button class="btn sci" onclick="sciFunc('cube')">x³</button>
+            <button class="btn sci" onclick="powerOp()">xʸ</button>
+            <button class="btn sci" onclick="sciFunc('sqrt')">√x</button>
+            <button class="btn sci" onclick="sciFunc('cbrt')">∛x</button>
+            <button class="btn sci" onclick="sciFunc('inv')">1/x</button>
+
+            <!-- Row 5: Constants & sign -->
+            <button class="btn sci" onclick="sciFunc('pi')">π</button>
+            <button class="btn sci" onclick="sciFunc('e')">e</button>
+            <button class="btn sci" onclick="sciFunc('fact')">n!</button>
+            <button class="btn sci" onclick="sciFunc('abs')">|x|</button>
+            <button class="btn operator" onclick="negate()">±</button>
+            <button class="btn operator" onclick="percent()">%</button>
+
+            <!-- Separator -->
+            <div class="sep"></div>
+
+            <!-- Row 6: 7 8 9 ÷ × − -->
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn operator" onclick="appendOperator('/')">÷</button>
+            <button class="btn operator" onclick="appendOperator('*')">×</button>
+            <button class="btn operator" onclick="appendOperator('-')">−</button>
+
+            <!-- Row 7: 4 5 6 + ± % -->
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn operator" onclick="appendOperator('+')">+</button>
+            <button class="btn operator" onclick="negate()">±</button>
+            <button class="btn operator" onclick="percent()">%</button>
+
+            <!-- Row 8: 1 2 3 = (wide3) -->
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn equal wide3" onclick="calculate()">=</button>
+
+            <!-- Row 9: 0 (wide2) . -->
+            <button class="btn wide2" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+/* ── converter-specific styles only ──
+   Base styles (body, .calculator, .keys, .btn, .wide, .tall …)
+   come from ../calc-l1/style.css
+   ─────────────────────────────────── */
+
+/* Override calculator width for the converter */
+.calculator {
+    width: 260px;
+}
+
+/* Category tabs */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-bottom: 8px;
+}
+
+.tab {
+    background-color: #c0c0c0;
+    border: none;
+    padding: 3px 7px;
+    font-size: 11px;
+    font-family: 'Tahoma', sans-serif;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #000,
+        inset 2px 2px 0 #dfdfdf, inset -2px -2px 0 #808080;
+}
+
+.tab.active {
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #fff,
+        inset 2px 2px 0 #808080, inset -2px -2px 0 #dfdfdf;
+    font-weight: bold;
+    color: #000080;
+}
+
+/* From / To input rows */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.input-row label {
+    font-size: 11px;
+    width: 18px;
+    text-align: right;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.input-row input[type="number"] {
+    flex: 1;
+    padding: 4px 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    text-align: right;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #fff;
+    min-width: 0;
+}
+
+.input-row input[type="number"]:focus {
+    outline: none;
+}
+
+/* Hide browser spin arrows */
+.input-row input[type="number"]::-webkit-inner-spin-button,
+.input-row input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.unit-select {
+    padding: 3px 4px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 11px;
+    background-color: #fff;
+    border: none;
+    box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #fff;
+    cursor: pointer;
+    flex-shrink: 0;
+    max-width: 90px;
+}
+
+/* Swap row */
+.swap-row {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-swap {
+    background-color: #c0c0c0;
+    border: none;
+    padding: 3px 14px;
+    font-size: 13px;
+    font-family: 'Tahoma', sans-serif;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #000,
+        inset 2px 2px 0 #dfdfdf, inset -2px -2px 0 #808080;
+}
+
+.btn-swap:active {
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #fff,
+        inset 2px 2px 0 #808080, inset -2px -2px 0 #dfdfdf;
+}
+
+/* Divider line */
+.divider {
+    height: 1px;
+    background-color: #808080;
+    box-shadow: 0 1px 0 #fff;
+    margin: 6px 0;
+}
